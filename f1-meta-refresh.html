@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <!-- Test F1 : redirection côté client par meta-refresh après 1 seconde.
+       Un outil correct doit atteindre cible-f1.html et signaler une étape de type « meta_refresh ». -->
+  <meta http-equiv="refresh" content="1; url=cible-f1.html">
+  <title>Test F1 : page intermédiaire (meta-refresh)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Test F1 : page intermédiaire</h1>
+  <p>Cette page redirige vers la page cible au bout d'une seconde grâce à une balise meta-refresh.</p>
+  <p class="marqueur">MARQUEUR-F1-INTERMEDIAIRE</p>
+  <p>Si la redirection ne se fait pas, <a href="cible-f1.html">ouvrir la page cible</a>.</p>
+</body>
+</html>

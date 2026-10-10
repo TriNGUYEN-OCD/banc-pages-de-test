@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Test F2 : page intermédiaire (redirection JavaScript)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Test F2 : page intermédiaire</h1>
+  <p>Cette page redirige vers la page cible deux secondes après son chargement, uniquement par JavaScript.
+     Un outil qui n'attend pas ou n'exécute pas le JavaScript restera ici.</p>
+  <p class="marqueur">MARQUEUR-F2-INTERMEDIAIRE</p>
+  <noscript><p class="marqueur">MARQUEUR-F2-JS-NON-EXECUTE</p></noscript>
+  <p id="etat">Redirection en attente…</p>
+  <script>
+    // Test F2 : redirection côté client différée de 2 secondes.
+    // Le délai vérifie que l'outil attend la fin de l'exécution du JavaScript.
+    var DELAI_REDIRECTION_MS = 2000;
+    document.getElementById("etat").textContent = "Redirection dans 2 secondes.";
+    window.setTimeout(function () {
+      window.location.replace("cible-f2.html");
+    }, DELAI_REDIRECTION_MS);
+  </script>
+</body>
+</html>

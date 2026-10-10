@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Page cible du test F2 du banc de collecte">
+  <title>Test F2 : page cible atteinte</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Test F2 : page cible atteinte</h1>
+  <p>L'outil a suivi correctement la redirection JavaScript.</p>
+  <p class="marqueur">MARQUEUR-F2-CIBLE-ATTEINTE</p>
+
+  <!-- Éléments de contrôle pour l'extracteur commun (formulaires, liens, texte caché).
+       Formulaire fictif sans marque, l'action pointe vers un domaine réservé à la documentation. -->
+  <p class="cache">MARQUEUR-F2-TEXTE-CACHE</p>
+  <p>Lien externe de contrôle : <a href="https://example.org/">example.org</a></p>
+  <form action="https://example.com/formulaire-de-test" method="post">
+    <label for="identifiant">Identifiant (test)</label>
+    <input id="identifiant" name="identifiant" type="text" autocomplete="off">
+    <label for="mot_de_passe">Mot de passe (test)</label>
+    <input id="mot_de_passe" name="mot_de_passe" type="password" autocomplete="off">
+    <button type="button">Bouton inactif</button>
+  </form>
+</body>
+</html>
